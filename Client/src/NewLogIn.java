@@ -85,6 +85,7 @@ private void initComponents() {
 	lblNewLabel.setText("Enter your details");
 	
 	JButton btnLogin = new JButton("Login");
+	//Action listener that launches the chat frame if the users credentials are correct
 	btnLogin.addActionListener(new ActionListener() {
 		//@SuppressWarnings("deprecation")
 		public void actionPerformed(ActionEvent arg0) {

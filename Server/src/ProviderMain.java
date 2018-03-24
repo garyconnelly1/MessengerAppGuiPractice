@@ -124,7 +124,7 @@ class Provider extends Thread{
 				
 				// https://stackoverflow.com/questions/11726023/split-string-into-individual-words-java
 				String[] words = message.split(" ");
-//////IGNORE THIS DARRAGH-----------------------------------------------------------------				
+//////IGNORE THIS -----------------------------------------------------------------				
 				//checking if the first word is login
 				if(words[0].equals("login") && words.length == 3){
 					System.out.println("attempting login");
@@ -149,19 +149,19 @@ class Provider extends Thread{
 							}//end for
 						}//end if
 	
-//////IGNORE THIS DARRAGH-----------------------------------------------------------------							
+//////IGNORE THIS -----------------------------------------------------------------							
 						//to creat a group
 						else if(words[0].equals("CREATEGROUP")) {
 							createGroup(words);
 						}
 						
-//////IGNORE THIS DARRAGH-----------------------------------------------------------------							
+//////IGNORE THIS -----------------------------------------------------------------							
 						//to return the list of groups
 						else if(words[0].equals("RETURNGROUPS")) {
 							System.out.println("Groups: " + getGroups());
 						}
 						else{
-//DARRAGH THIS IS WHERE THE MESSAGE THAT IS TYPED INTO THE TEXT BOX ON MESSAGECHATYURT ENDS UP
+// THIS IS WHERE THE MESSAGE THAT IS TYPED INTO THE TEXT BOX ON MESSAGECHATYURT, ENDS UP
 //THIS METHOD IS WORKING AND IT SENDS A MESSAGE BACK TO THE CLIENT BUT IS NEVER READ AS THE CLIENT IS STUCK IN THE LOOP							
 							//-------------------attempting a broadcast message--------------------------
 							List<Provider> userList = server.getProviderList();

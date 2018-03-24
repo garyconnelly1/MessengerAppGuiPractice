@@ -79,13 +79,13 @@ public class MessageChatYurt extends JFrame{
 				//read messages in from the server in a loop
 			    whileChatting();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		
 		
         
-       // System.out.println("yo");
+       // System.out.println("hi");
     }
     
 	private void initComponents() {
@@ -122,6 +122,9 @@ public class MessageChatYurt extends JFrame{
       //  add(new JScrollPane(textArea));
       //  textField = new JTextField();
      //   textField.setColumns(10);
+        
+   ////////////////////////////////
+        //AUTO-GENERATED GUI USING THE WINDOW-BUILDER
         GroupLayout gl_contentPane = new GroupLayout(contentPane);
         gl_contentPane.setHorizontalGroup(
             gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -203,7 +206,7 @@ public class MessageChatYurt extends JFrame{
 	}
     
     //////////////////////////////////////////////////////////////////
-    //THIS IS THE METHOD THAT IS CAUSING PROBLEMS, AS SOON AS I CALL THIS METHOD THE GUI WILL NOT RENDER
+    //THIS IS THE METHOD THAT IS CAUSING PROBLEMS.
     /////////////////////////////////////////////////////////////////
     private void whileChatting() throws IOException {
     	SwingWorker<Void, Void> worker = new SwingWorker<Void, Void>(){
@@ -222,6 +225,7 @@ public class MessageChatYurt extends JFrame{
 						login.outPutMessage(message);
 							message = (String) in.readObject();
 							login.outPutMessage("message recieved " + message);
+							//--------------This seems to be the line the whole system is slipping up on
 							if(!message.equals(null)) {
 								login.outPutMessage("inside if");
 								showMessage("\n FRIEND: " + message);
